@@ -1,21 +1,16 @@
 import { NavLink, useLocation, Link } from "react-router-dom";
 import {
     LayoutDashboard,
-    ShoppingCart,
-    Package,
-    FileText,
-    Lightbulb,
-    FolderOpen,
+    BookOpen,
+    Trophy,
+    ShoppingBag,
     Megaphone,
-    Bookmark,
-    Phone,
     Settings,
+    HelpCircle,
     X,
     LogOut,
     ChevronLeft,
     ChevronRight,
-    PanelLeftClose,
-    PanelLeftOpen
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "../../utils/cn";
@@ -23,15 +18,12 @@ import { Button } from "../ui/Button";
 
 const sidebarItems = [
     { icon: LayoutDashboard, label: "Dashboard", path: "/" },
-    { icon: FileText, label: "My Paid Test Series", path: "/test-series" },
-    { icon: ShoppingCart, label: "Buy Test Packages", path: "/buy-packages" },
-    { icon: Package, label: "My Results", path: "/results" },
-    { icon: Lightbulb, label: "Suggestions", path: "/suggestions" },
-    { icon: FolderOpen, label: "Documents", path: "/documents" },
+    { icon: BookOpen, label: "My Courses", path: "/my-courses" },
+    { icon: Trophy, label: "My Results", path: "/results" },
+    { icon: ShoppingBag, label: "My Purchases", path: "/purchases" },
     { icon: Megaphone, label: "Announcements", path: "/announcements" },
-    { icon: Bookmark, label: "Bookmarked Questions", path: "/bookmarks" },
-    { icon: Phone, label: "Contact Us", path: "/contact" },
     { icon: Settings, label: "Settings", path: "/settings" },
+    { icon: HelpCircle, label: "Help", path: "/help" },
 ];
 
 export function Sidebar({ isOpen, onClose, isCollapsed, toggleCollapse }) {
