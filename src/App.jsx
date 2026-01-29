@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AppLayout } from "./components/layout/AppLayout";
 import Dashboard from "./pages/Dashboard";
+import MyCourses from "./pages/MyCourses";
+import CoursePlayer from "./pages/CoursePlayer";
 import TestSeries from "./pages/TestSeries";
 import BuyPackages from "./pages/BuyPackages";
 import Results from "./pages/Results";
@@ -15,8 +17,10 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/course-player/:courseId" element={<CoursePlayer />} />
         <Route element={<AppLayout />}>
           <Route path="/" element={<Dashboard />} />
+          <Route path="/my-courses" element={<MyCourses />} />
           <Route path="/test-series" element={<TestSeries />} />
           <Route path="/buy-packages" element={<BuyPackages />} />
           <Route path="/results" element={<Results />} />

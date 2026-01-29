@@ -45,7 +45,7 @@ const Button = React.forwardRef(({ className, variant = "default", size = "defau
         icon: "h-10 w-10",
     }
 
-    const baseStyles = "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 relative overflow-hidden"
+    const baseStyles = "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-0 active:scale-95 disabled:pointer-events-none disabled:opacity-50 relative overflow-hidden"
 
     return (
         <motion.button
